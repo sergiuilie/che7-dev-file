@@ -55,7 +55,7 @@ components:
           - ReadWriteOnce
          resources:
            requests:
-             storage: 128Mi
+             storage: 256Mi
     type: kubernetes
     alias: zowe-cli
 apiVersion: 1.0.0
