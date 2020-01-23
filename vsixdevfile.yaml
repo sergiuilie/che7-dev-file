@@ -12,13 +12,9 @@ category: Language
 spec:
   containers:
     - image: eclipse/che-remote-plugin-runner-java11:7.3.0
+      memoryLimit: 1.5Gi
       env:
       - name: JVM_OPTS
         value: "-Xmx1Gi"
-      resources:
-        requests:
-          memory: 512Mi
-        limits:
-          memory: 1.5Gi
   extensions:
     - https://github.com/sergiuilie/che7-dev-file/raw/master/cobol-language-support-0.9.1.vsix
