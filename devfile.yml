@@ -7,7 +7,7 @@ components:
     alias: cobol-language-support
     env:
       - name: JAVA_OPTS
-        value: "-Xmx1Gi"
+        value: "-Xmx1G"
   - type: chePlugin
     reference: 'https://github.com/eclipse/che-che4z/raw/1.0.0/plugins/cobol.yaml'
     alias: cobol
