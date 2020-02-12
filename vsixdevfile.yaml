@@ -11,7 +11,7 @@ repository:
 category: Language
 spec:
   containers:
-    - image: eclipse/che-remote-plugin-runner-java11:7.3.0
-      memoryLimit: 1.5Gi
+    - image: quay.io/eclipse/che-sidecar-java:8-0cfbacb
+      memoryLimit: 1Gi
   extensions:
     - https://github.com/sergiuilie/che7-dev-file/raw/master/cobol-language-support-0.10.0.vsix
