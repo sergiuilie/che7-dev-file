@@ -13,8 +13,6 @@ spec:
   containers:
     - image: quay.io/eclipse/che-sidecar-java:11-f76ca45
       memoryLimit: 1Gi
-      volumeMounts:
-      - name: shared-data
-        mountPath: /home/user/here
+      mountSources: true
   extensions:
     - https://github.com/sergiuilie/che7-dev-file/raw/master/cobol-language-support-0.10.1.vsix
