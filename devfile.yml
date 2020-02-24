@@ -41,9 +41,9 @@ components:
             limits:
              memory: 1024Mi
            volumeMounts:
-            - mountPath: /projects
+            - mountPath: "/projects"
               name: projects
-            - mountPath: /home/user/.zowe
+            - mountPath: "/home/user/.zowe"
               name: zowe
        -
         apiVersion: v1
