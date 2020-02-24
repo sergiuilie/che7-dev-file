@@ -1,3 +1,4 @@
+  
 metadata:
   name: SI_130120_Stack
 components:
@@ -40,11 +41,11 @@ components:
            resources:
             limits:
              memory: 1024Mi
-           volumeMounts:	
-           - mountPath: /projects	
-             name: projects	
-           - mountPath: /home/user/.zowe	
-             name: zowe
+           volumeMounts:
+            - mountPath: /projects
+              name: projects
+            - mountPath: /home/user/.zowe
+              name: zowe
        -
         apiVersion: v1
         kind: PersistentVolumeClaim
