@@ -25,6 +25,8 @@ components:
          name: zowe
         spec:
          volumes:
+          - name: shared-data
+            emptyDir: {}
           - name: zowe
             persistentVolumeClaim:
               claimName: zowe-claim
