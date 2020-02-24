@@ -5,7 +5,6 @@ components:
     reference: >-
       https://raw.githubusercontent.com/sergiuilie/che7-dev-file/master/vsixdevfile.yaml
     alias: cobol-language-support
-    mountSources: true
   - type: chePlugin
     reference: 'https://github.com/eclipse/che-che4z/raw/1.0.0/plugins/cobol.yaml'
     alias: cobol
@@ -42,9 +41,9 @@ components:
             limits:
              memory: 1024Mi
            volumeMounts:
-            - mountPath: "/projects"
+            - mountPath: /projects
               name: projects
-            - mountPath: "/home/user/.zowe"
+            - mountPath: /home/user/.zowe
               name: zowe
        -
         apiVersion: v1
