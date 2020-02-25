@@ -47,15 +47,15 @@ components:
               name: zowe
        -
         apiVersion: v1
-        kind: PersistentVolume
+        kind: PersistentVolumeClaim
         metadata:
          name: zowe-claim
         spec:
          accessModes:
-          - ReadWriteMany
+          - ReadWriteOnce
          resources:
            requests:
-             storage: 256Mi
+             storage: 512Mi
     type: kubernetes
     alias: zowe-cli
 apiVersion: 1.0.0
