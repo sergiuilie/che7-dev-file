@@ -27,9 +27,6 @@ components:
          volumes:
           - name: sergiu
             emptyDir: {}
-          - name: zowe
-            persistentVolumeClaim:
-              claimName: zowe-claim
          containers:
           - 
            image: 'ca-docker-brightside-docker.bintray.io/cli-mainframe-basic-stack:2020-02-13T23-41-08'
@@ -42,20 +39,6 @@ components:
            resources:
             limits:
              memory: 1024Mi
-           volumeMounts:
-            - mountPath: /home/user/.zowe
-              name: zowe
-       -
-        apiVersion: v1
-        kind: PersistentVolumeClaim
-        metadata:
-         name: zowe-claim
-        spec:
-         accessModes:
-          - ReadWriteOnce
-         resources:
-           requests:
-             storage: 512Mi
     type: kubernetes
     alias: zowe-cli
 apiVersion: 1.0.0
