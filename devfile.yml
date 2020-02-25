@@ -37,15 +37,13 @@ components:
            - name: THEIA_PLUGINS
              value: local-dir:///plugins
            - name: ZOWE_CLI_HOME
-             value: /projects/user/.zowe
+             value: /home/user/.zowe
            name: cli
            resources:
             limits:
              memory: 1024Mi
            volumeMounts:
-            - mountPath: /projects
-              name: projects
-            - mountPath: /projects/user/.zowe
+            - mountPath: /home/user/.zowe
               name: zowe
        -
         apiVersion: v1
@@ -54,7 +52,7 @@ components:
          name: zowe-claim
         spec:
          accessModes:
-          - ReadWriteOnce
+          - ReadWriteMany
          resources:
            requests:
              storage: 256Mi
