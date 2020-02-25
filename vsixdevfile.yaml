@@ -14,7 +14,7 @@ spec:
     - image: quay.io/eclipse/che-sidecar-java:11-f76ca45
       memoryLimit: 1Gi
       volumeMounts:
-      - mountPath: /home/user/.testing
+      - mountPath: /projects/.testing
         name: zowe
         readOnly: true
   extensions:
