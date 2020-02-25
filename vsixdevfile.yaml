@@ -13,13 +13,5 @@ spec:
   containers:
     - image: quay.io/eclipse/che-sidecar-java:11-f76ca45
       memoryLimit: 1Gi
-      volumeMounts:
-      - mountPath: /home/user/.testing
-        name: zowe
-        readOnly: true
   extensions:
     - https://github.com/sergiuilie/che7-dev-file/raw/master/cobol-language-support-0.10.1.vsix
-  volumes:  
-    - name: zowe
-      persistentVolumeClaim:
-        claimName: zowe-claim
