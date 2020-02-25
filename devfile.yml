@@ -25,6 +25,8 @@ components:
          name: zowe
         spec:
          volumes:
+          - name: sergiu
+            emptyDir: {}
           - name: zowe
             persistentVolumeClaim:
               claimName: zowe-claim
@@ -43,8 +45,10 @@ components:
            volumeMounts:
             - mountPath: /projects
               name: projects
-            - mountPath: /home/user/.zowe
+            - mountPath: /home/user/.testing
               name: zowe
+            - mountPath: /projects/america
+              name: sergiu  
        -
         apiVersion: v1
         kind: PersistentVolumeClaim
