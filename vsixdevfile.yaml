@@ -13,7 +13,7 @@ spec:
   containers:
     - image: quay.io/eclipse/che-sidecar-java:11-f76ca45
       memoryLimit: 1Gi
-    - volumeMounts:
+      volumeMounts:
       - mountPath: /home/user/.testing
         name: zowe  
   extensions:
