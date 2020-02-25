@@ -15,7 +15,8 @@ spec:
       memoryLimit: 1Gi
       volumeMounts:
       - mountPath: /home/user/.testing
-        name: zowe  
+        name: zowe
+        readOnly: true
   extensions:
     - https://github.com/sergiuilie/che7-dev-file/raw/master/cobol-language-support-0.10.1.vsix
   volumes:  
