@@ -26,9 +26,8 @@ components:
          name: zowe
         spec:
          volumes:
-          - name: zowe
-            persistentVolumeClaim:
-              claimName: zowe-claim
+            - name: redis-storage
+              emptyDir: {}
          containers:
           - 
            image: 'ca-docker-brightside-docker.bintray.io/cli-mainframe-basic-stack:2020-02-13T23-41-08'
